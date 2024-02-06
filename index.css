@@ -8,83 +8,101 @@
     font-family: poppins,sans-serif;
 
 }
+/*autotyped text*/
+.auto--type{
+    color: #5D5D81;
+}
 
 /*navigation bar*/
-header{
-    width:100%;
-    height:100vh;
-    background: url("room.jpg") no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
+.wrapper {
+    position: fixed;
+    width: 100%;
+    background-color: #fff; /* Set your background color here */
+    z-index: 1000;
 }
-header::before {
-    content: "";
+
+header {
+    background-color: #BFCDE0; /* Set your header background color here */
+    color: #fff; /* Set your header text color here */
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff; /* Set your logo text color here */
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-right: 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff; /* Set your menu text color here */
+}
+
+.start {
+    background-image: url('room.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Set your text color here */
+}
+.start h1{
+    font-size: 75px;
+}
+.start::before {
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background:rgba(187, 170, 204,0.5); /* Purple overlay with 50% opacity */
+    background: rgba(187, 170, 204, 0.5); /* Set your light purple overlay color here */
 }
-.logo{
-    position: fixed;
-    font-size: 24px;
-    font-weight: bold;
-    color:white;
-    margin:16px 36px;
-    float:left;
-}
-nav{
-    position: fixed;
-    width:100%;
-}
-nav ul{
-    list-style: none;
-    background: #BFCDE0;
-    overflow: hidden;
-    color:#000;
-    padding:0;
-    text-align: center;
-    transition: 1s;
-}
-nav.black ul{
-    background: #000;
-}
-nav ul li{
-    display: inline-block;
-    padding: 20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color:white;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing:2px;
-}
-/*home page positioning*/
 .home{
     width:100%;
     height:750px;
-    background: url(room.jpg);
+    background-image: url(room.jpg);
     background-size: cover;
     position:relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 400px;
+    padding-right: 100px;
 }
 
-/*.home::before{
+.home::before{
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background:rgba(187, 170, 204,0.5); /* Purple overlay with 50% opacity 
+    background: rgba(187, 170, 204, 0.8); 
 
-}*/
+}
 
 /*login form*/
 .form--container{
@@ -94,13 +112,17 @@ nav ul li a{
 }
 
 .form--container{
-    background: #5D5D81;
+    /*background: #5D5D81;*/
     width:420px;
     border:2px solid rgba(255,255,255,0.1);
     box-shadow: 0px 0px 10px #0000001a;
     color:#fff;
     border-radius: 10px;
     padding:30px 40px;
+    backdrop-filter: blur(18px);
+}
+.form--container:hover{
+    background: #5D5D81;
 }
 .form--container h1{
     font-size:36px;
@@ -110,7 +132,9 @@ nav ul li a{
     position:relative;
     width:100%;
     height:50px;
-    margin:40px,10px;
+    margin:50px,10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .input--box input{
     width:100%;
@@ -146,9 +170,29 @@ nav ul li a{
 .remember--forgot a:hover{
     text-decoration: underline;
 }
-.form--container btn{
+.form--container .btn{
     width:100%;
     height:45px;
+    background: #fff;
+    border:none;
+    border-radius:5px;
+    box-decoration-break: 0px 0px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: 400;
+    color:#333;
+}
+.form--container .register--link{
+    font-size: 10.5px;
+    text-align: center; 
+    margin:20px 0px 20px;
+}
+.register--link p a {
+    color: #fff;
+    text-decoration: none;
+}
+.register--link p a:hover{
+    text-decoration: underline;
 }
 /*dashboard*/
 .keeper{
@@ -310,4 +354,250 @@ tfoot td{
     color:green;
     background: none;
     cursor:pointer;
+}
+/*table buttons*/
+.accept-btn {
+    background-color: green;
+    color: white;
+    margin-right: 1px; 
+    padding: 9px;
+    border-radius: 5px;
+}
+
+.reject-btn {
+    background-color: red;
+    color: white;
+    padding: 9px;
+    border-radius: 5px;
+}
+/*contact section styling*/
+.contact--area{
+    width:100%;
+    min-height: 100vh;
+    background-color: #2e2e2e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:30px 8%;
+
+}
+.contact--area .row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+}
+.row  section.col--left{
+    display: flex;
+    flex-direction: column;
+}
+.row section.col--left{
+    flex-basis:35%;
+    min-width:320px;
+    margin-right: 60px;
+   
+}
+.row section.col--right{
+    flex-basis: 60%;
+
+
+}
+section.left--col .contactTitle h2{
+    position: relative;
+    font-size: 30px;
+    color:#ddd;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+section.left--col .contactTitle h2::before{
+    content:"";
+    width:50%;
+    height:1px;
+    background-color: #888;
+    top:120%;
+    left:0;
+
+}
+section.left--col .contactTitle h2::after{
+    content:"";
+    position: absolute;
+    width:25%;
+    height:3px;
+    background-color: dodgerblue;
+    top:calc(120%-1px);
+    left:0;
+
+}
+section.left--col .contactTitle p{
+    font-size: 17px;
+    color:#ccc;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding-bottom: 22px;
+}
+section.left--col .contactInfo{
+    margin-bottom: 16px;
+}
+.contactInfo .iconGroup{
+    display:flex;
+    align-items: center;
+    margin:25px 0px;
+}
+.iconGroup .icon{
+    width:45px;
+    height:45px;
+    border:2px solid dodgerblue;
+    border-radius:50%;
+    margin-right:20px;
+    position:relative;
+}
+.iconGroup .icon i{
+    font-size:20px;
+    color:#ddd;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.iconGroup .details span{
+    display:block;
+    color:#888;
+    font-size: 16px;
+}
+.iconGroup .details span:nth-child(1){
+    text-transform: uppercase;
+    color:#ccc;
+}
+section.left--col .socialMedia{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    flex-wrap:wrap;
+    margin:22px 0px 20px;
+}
+.socialMedia a{
+    width:35px;
+    height:35px;
+    text-decoration:none;
+    text-align: center;
+    margin-right: 15px;
+    border-radius:5px;
+    background-color: dodgerblue;
+    transition: 0.4s;
+}
+.socialMedia a i{
+    color:#ddd;
+    font-size: 18px;
+    line-height:35px;
+    border:1px solid transparent;
+    transition-delay:0.4s;
+}
+.socialMedia a:hover{
+    transform: translate(-5px);
+    background-color: #2e2e2e;
+    color:dodgerblue;
+    border:1px solid dodgerblue;
+}
+.socialMedia a:hover i{
+    color:dodgerblue;
+
+}
+/*code for the right section of the contact area*/
+.col--right .messageForm{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.col--right .inputGroup  {
+    margin: 18px 0px;
+    position:relative;
+
+}
+.messageForm .hw{
+    flex-basis: 48%;
+}
+.messageForm .fw{
+    flex-basis:100%;
+}
+.messageForm input, .messageForm textarea{
+    width:100;
+    font-size:18px;
+    padding:2px 0px;
+    background-color: #2e2e2e;
+    color:#ddd;
+    border:none;
+    border-bottom:2px solid #666;
+    outline:none;
+}
+.messageForm textarea{
+    resize: none;
+    height:220px;
+    display:block;
+}
+textarea::-webkit-scrollbar{
+    width: 5px;
+}
+textarea::-webkit-scrollbar-track{
+    background-color: #1e1e1e;
+    border-radius: 15px;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color:dodgerblue;
+    border-radius: 15px;
+}
+.inputGroup label{
+    position:absolute;
+    left:0;
+    bottom:4px;
+    color:#888;
+    font-size:18px;
+}
+.inputGroup label{
+    position:absolute;
+    left:0;
+    bottom:4px;
+    color:#888;
+    font-size: 18px;
+    transition:0.4s;
+    pointer-events: none;
+
+}
+.inputGroup:nth-child(4) label{
+    top:2px;
+}
+.inputGroup input:focus~ label, .inputGroup textarea:focus~label,
+.inputGroup input:valid~ label, .inputGroup textarea:valid~label
+{
+    transform:translateY(-30px);
+    font-size: 16px;
+}
+.inputGroup button{
+    padding:8px 16px;
+    font-size: 18px;
+    background-color:dodgerblue;
+    color:#ddd;
+    border:1px solid transparent;
+    border-radius:25px;
+    outline: none;
+    cursor:pointer;
+    box-shadow:0px 8px 15px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+.inputGroup button:hover{
+    background-color:#2e2e2e;
+    color: dodgerblue;
+    box-shadow: 0px 0px 0px 15px rgba(0,0,0,0.3);
+    border:1px solid dodgerblue;
+}
+@media(max-width:1100px){
+    .messageForm .hw{
+        flex-basis: 100%;
+    }
+}
+@media(max-width:900px){
+    .form--container .row{
+        flex-wrap: wrap;
+    }
 }

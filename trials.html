@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimathi Hostel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .wrapper {
+            position: fixed;
+            width: 100%;
+            background-color: #fff; /* Set your background color here */
+            z-index: 1000;
+        }
+
+        header {
+            background-color: #333; /* Set your header background color here */
+            color: #fff; /* Set your header text color here */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff; /* Set your logo text color here */
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu ul li {
+            margin-right: 15px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #fff; /* Set your menu text color here */
+        }
+
+        .start {
+            background-image: url('room.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff; /* Set your text color here */
+        }
+
+        .start::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(173, 216, 230, 0.7); /* Set your light purple overlay color here */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="logo">Hostel<span>System</span></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Book</a></li>
+                        <li><a href="#">Application</a></li>
+                        <li><a href="#">Details</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <section class="start">
+        <h1>Welcome to Kimathi Hostel</h1>
+    </section>
+
+    <!-- Other sections go here -->
+
+</body>
+</html>

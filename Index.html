@@ -13,7 +13,6 @@
         <header>
             <nav>
                 <div class="logo">Hostel<span>System</span></div>
-                
                 <div class="menu">
                     <ul>
                         <li><a href="#">Dashboard</a></li>
@@ -26,14 +25,16 @@
                     </ul>
                 </div>
             </nav>
-            <div>lorem</div>
         </header>
-        
     </div>
+
+    <section class="start">
+        <h1>Welcome to Kimathi<span class="auto--type"></span></h1>
+    </section>
+    
     <section class="home">
        
-        <h1>welcome to kimathi hostel <br>booking system<h1>
-      </div>
+      
       <div class="form--container">
         <form action="#" >
             <h1>Login</h1>
@@ -66,7 +67,7 @@
         </div>
         <div class="card--container">
           <h3 class="main--title">
-              Housekeepers name
+              Housekeeper's details
           </h3>
           <div class="card--wrapper">
               <div class="name--card
@@ -139,10 +140,12 @@
                       <td>
                           11
                       </td>
-                     <td> <button>
-                          log
-                      </button>
-                  </td>
+                      <td>
+                        <button class="accept-btn">Accept</button>
+                    </td>
+                    <td>
+                        <button class="reject-btn">Reject</button>
+                    </td>
                       
                   </tr>
                   <tr>
@@ -161,10 +164,12 @@
                       <td>
                           11
                       </td>
-                     <td> <button>
-                          log
-                      </button>
-                  </td>
+                      <td>
+                        <button class="accept-btn">Accept</button>
+                    </td>
+                    <td>
+                        <button class="reject-btn">Reject</button>
+                    </td>
                       
                   </tr>
                   <tr>
@@ -182,17 +187,106 @@
                       </td>
                       <td>
                           11
-                      </td>
-                     <td> <button>
-                          log
-                      </button>
-                  </td>
-                      
+                          <td>
+                            <button class="accept-btn">Accept</button>
+                        </td>
+                        <td>
+                            <button class="reject-btn">Reject</button>
+                        </td>
                   </tr>
                </tbody>
            </thead>
         </table>
         </div>
         </section>
+        <section class="contact--area">
+            <div class="contact--container">
+                <main class="row">
+                    <!--The left side of the contact section-->
+                    <section class="col--left">
+                        <div class="contactTitle">
+                            <h2>Contact Us</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            </p>
+                        </div>
+                   <div class="contactInfo">
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="details">
+                            <span>Phone</span>
+                            <span>+254 7222 000</span>
+                        </div>
+                    </div>
+                    <div class="contactInfo">
+                        <div class="iconGroup">
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="details">
+                                <span>Email/span>
+                                <span>dkuthostelbooking@gmail.co.ke</span>
+                            </div>
+                        </div>
+                        <div class="contactInfo">
+                            <div class="iconGroup">
+                                <div class="icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="details">
+                                    <span>Location</span>
+                                    <span>Kimathi street,Kabiruini show-ground</span>
+                                </div>
+                            </div>
+                   </div>
+                  <!-- <div class="socialMedia">
+                    <a href="#"><i class="fa fa-facebook-official"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                   </div>-->
+
+                    </section>
+                    <!--end of the left section-->
+                    <!--Right messaging section begins here-->
+                    <section class="col--right">
+                        <form  class="messageForm">
+                            <div class="inputGroup  hw">
+                                <input type="text" required name="jina" id="name"/>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="inputGroup  hw">
+                                <input type="email" required name="mail" id="mail">
+                                <label for="mail">Email</label>
+                            </div>
+                            <div class="inputGroup  fw">
+                                <input type="text" required name="subject" id="subject">
+                                <label for="mail">Subject</label>
+                            </div>
+                            <div class="inputGroup  fw">
+                                <textarea required name="text" id="text"></textarea>
+                                <label for="Text"></label>
+                            </div>
+                            <div class="inputGroup fw">
+                               <button>Send</button>
+                            </div>
+                        </form>
+
+                    </section>
+
+                 <!--Right section ends here-->
+                </main>
+            </div>
+        </section>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed(".auto--type", {
+                strings: ["HOSTEL", "BOOKING", "SYSTEM"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true
+            });
+        </script>
+        
 </body>
 </html>
